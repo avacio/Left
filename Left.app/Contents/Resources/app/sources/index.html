@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Left</title>
+    
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="links/reset.css"/>
+    <link rel="stylesheet" href="links/fonts.css"/>
+    <link rel="stylesheet" href="links/main.css"/>
+
+    <script src="scripts/lib/theme.js"></script>
+    <script src="scripts/lib/controller.js"></script>
+
+    <script src="scripts/navi.js"></script>
+    <script src="scripts/project.js"></script>
+    <script src="scripts/events.js"></script>
+    <script src="scripts/synonyms.js"></script>
+    <script src="scripts/dict.js"></script>
+    <script src="scripts/operator.js"></script>
+    <script src="scripts/left.js"></script>
+    <script src="scripts/options.js"></script>
+    <script src="scripts/reader.js"></script>
+    <script src="scripts/insert.js"></script>
+  </head>
+  <body>
+    <script>
+      const {webFrame} = require('electron')
+
+      const {dialog,app} = require('electron').remote;
+      const fs = require('fs');
+      const app_path = app.getAppPath();
+      
+      var left = new Left(); left.start();
+
+      // On Windows: open the file specified in the first argument
+      // (allows Open With and file associations on Windows)
+      const remote = require('electron').remote;
+      if (process.platform === "win32" && remote.process.argv.length > 1) {
+        left.project.add(remote.process.argv[1]);
+      }
+      
+    </script>
+  </body>
+</html>
