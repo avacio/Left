@@ -87,7 +87,7 @@ function Left()
     this.controller.add("default","View","Inc Zoom",() => {  left.options.set_zoom(left.options.zoom+0.1) },"CmdOrCtrl+Plus");
     this.controller.add("default","View","Dec Zoom",() => {  left.options.set_zoom(left.options.zoom-0.1) },"CmdOrCtrl+-");
     this.controller.add("default","View","Reset Zoom",() => {  left.options.set_zoom(1.6) },"CmdOrCtrl+0");
-    this.controller.add("default","View","Zoom zoom zoom",() => {  left.options.set_zoom(2.2) },"CmdOrCtrl+9");
+    this.controller.add("default","View","Zoom Zoom Zoom",() => {  left.options.set_zoom(2.2) },"CmdOrCtrl+9");
 
     this.controller.add("default","Mode","Reader",() => { left.reader.start(); },"CmdOrCtrl+K");
     this.controller.add("default","Mode","Operator",() => { left.operator.start(); },"CmdOrCtrl+F");
